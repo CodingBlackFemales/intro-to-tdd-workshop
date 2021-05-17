@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# Allows you to require any file in lib
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+
+# Require files here to run them in the terminal
+
+require 'leap_year'
+
+years = [1700, 1800, 1900].concat([*2000..2020])
+
+years.each do |year|
+  puts "#{year} -> #{leap_year(year)}"
+end
